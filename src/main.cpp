@@ -60,12 +60,18 @@ constinit float attributeArray[] = {0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,// 
 //                                    0.0f, 0.5f, 0.0f, 0.0f, 1.0f,// 左上
 //                                    0.5f, 0.0f, 1.0f, 1.0f, 1.0f// 右下
 //};
-constinit uint EBOArray[] = {
+constinit unsigned int EBOArray[] = {
         0, 1, 3,
         1, 2, 3
 };
 
-int main(const int argc, const char *argv[]) {
+import utility;
+
+int main(void) {
+  Ace::fun(1);
+  return 1;}
+
+int main2(const int argc, const char *argv[]) {
     try {
         Ace::GLWindow window(windowWidth, windowHeight, "computer graphics");
         // TODO VBO EBO VAO 整合到一个RenderContext中

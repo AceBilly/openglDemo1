@@ -22,49 +22,38 @@
     <Filter Include="Resource Files\Config">
       <UniqueIdentifier>{b994340c-cd60-4beb-b210-93219e47e4fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Modules">
+      <UniqueIdentifier>{f5f3f162-ae9f-4416-b577-5dd0d0c3024b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c">
       <Filter>Source Files\third_party</Filter>
     </ClCompile>
-    <ClCompile Include="src\Camer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Error.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GLWindow.cpp">
+    <ClCompile Include="src\GLWindow.tmp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Shader.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Modules\Shader.ixx">
+      <Filter>Source Files\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="src\Texture.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Modules\utility.ixx">
+      <Filter>Source Files\Modules</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Camer.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Error.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GLWindow.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Shader.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Texture.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\utility.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+    <ClCompile Include="src\Modules\utility.type.ixx">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Modules\Error.ixx">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Modules\GLWindow.ixx">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Modules\Texture.ixx">
+      <Filter>Source Files\Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Images\brick.png">
