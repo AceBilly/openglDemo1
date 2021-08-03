@@ -10,8 +10,6 @@ export module Shader;
 
 import <iostream>;
 import <string>;
-import <fstream>;
-import <sstream>;
 import <filesystem>;
 import <map>;
 import <initializer_list>;
@@ -28,8 +26,8 @@ export namespace Ace {
         // \param fragShader   片段着色器文件路径
         Shader(const fs::path& vertexShader, const fs::path& fragShader) {
             // 读取文件 待优化
-            std::string fragShaderCodeStr = readFile(fragShader);
-            std::string vertexShaderCodeStr = readFile(vertexShader);
+            std::string fragShaderCodeStr = Ace::readFile(fragShader);
+            std::string vertexShaderCodeStr = Ace::readFile(vertexShader);
 
             const char* vertexShaderCode = vertexShaderCodeStr.c_str();
             const char* fragShaderCode = fragShaderCodeStr.c_str();

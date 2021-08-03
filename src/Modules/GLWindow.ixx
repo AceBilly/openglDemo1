@@ -106,7 +106,7 @@ export namespace Ace {
     private:
         BackgroundColor m_background;
         window_t* m_window = nullptr;
-        std::unique_ptr<Ace::Shader> mp_shader = nullptr;
+        std::unique_ptr<Ace_Shader::Shader> mp_shader = nullptr;
         using texture_pt = std::shared_ptr<Ace::Texture>;
         unsigned int m_EBO, m_VAO, m_VBO;
         std::vector<texture_pt> m_textures;

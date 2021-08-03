@@ -15,7 +15,7 @@ export namespace Ace {
         return std::source_location(_Line_, _Column_, _File_, _Function_);
     }
             // 只处理编译Shader 和 链接程序额错误：暂时
-    static void shaderError(unsigned int id, bool flag = true, const std::source_location& location = current()) {
+    void shaderError(unsigned int id, bool flag = true, const std::source_location location = current()) {
             int success;
             char infoLog[512];
             if (flag) {

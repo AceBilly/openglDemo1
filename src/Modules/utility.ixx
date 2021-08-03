@@ -1,24 +1,22 @@
-//
-// Created by yhtse on 7/22/2021.
-//
-
+module;
+#include <string>
+#include <filesystem>
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 export module utility;
 export import utility.type;
 
-import<string>;
-import<filesystem>;
-import <iostream>;
-import <fstream>;
-import <sstream>;
+
 
 export namespace Ace {
-namespace fs = std::filesystem;
+    namespace fs = std::filesystem;
 using namespace std::literals::string_literals;
 // readfile
 // \param filePath 文件路径
 // \returns {std::string} 返回包含文件内容的string
-std::string readFile(const Ace::fs::path& filePath) {
+std::string readFile(const fs::path& filePath) {
   try {
     if (!Ace::fs::exists(filePath)) {
       throw std::runtime_error("file path not exists!");
