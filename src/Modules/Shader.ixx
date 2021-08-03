@@ -1,5 +1,11 @@
 module;
 
+#include <iostream>
+#include <string>
+#include <filesystem>
+#include <map>
+#include <initializer_list>
+
 #include "../../inc/glm/glm/glm.hpp"
 #include "../../inc/glm/glm/gtc/matrix_transform.hpp"
 #include  "../../inc/glm/glm/gtc/type_ptr.hpp"
@@ -7,12 +13,6 @@ module;
 #include <glad/glad.h>
 
 export module Shader;
-
-import <iostream>;
-import <string>;
-import <filesystem>;
-import <map>;
-import <initializer_list>;
 
 import utility;
 import Error;
