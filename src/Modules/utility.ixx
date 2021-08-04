@@ -10,13 +10,13 @@ export import utility.type;
 
 
 
-export namespace Ace {
+namespace Ace {
     namespace fs = std::filesystem;
 using namespace std::literals::string_literals;
 // readfile
 // \param filePath 文件路径
 // \returns {std::string} 返回包含文件内容的string
-std::string readFile(const fs::path& filePath) {
+export std::string readFile(const fs::path& filePath) {
   try {
     if (!Ace::fs::exists(filePath)) {
       throw std::runtime_error("file path not exists!");

@@ -1,7 +1,6 @@
 
 #include <exception>
-#include "GLWindow.h"
-
+import GLWindow;
 // TODO 因为GLFW 库的设置回调函数的函数，导致整体代码非良构
 constinit int windowWidth = 800;
 constinit int windowHeight = 800;
@@ -67,9 +66,6 @@ constinit unsigned int EBOArray[] = {
 
 import utility;
 
-int main(void) {
-  Ace::fun(1);
-  return 1;}
 
 int main2(const int argc, const char *argv[]) {
     try {

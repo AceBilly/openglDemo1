@@ -17,9 +17,9 @@ export module Shader;
 import utility;
 import Error;
 
-export namespace Ace {
+namespace Ace {
     namespace fs = std::filesystem;
-    class Shader {
+    export class Shader {
     public:
         // 从文件中读取着色器源码 并编译 最后释放着色器资源
         // \param vertexShader 顶点着色器文件路径
@@ -112,7 +112,7 @@ export namespace Ace {
         void getVariables(const fs::path& shaderPath) {
             try {
                 if (fs::exists(shaderPath)) {
-                    std::string shaderSrc = readFile(shaderPath);
+                    std::string shaderSrc = Ace::readFile(shaderPath);
 
                     rapidjson::Document document;
                     document.Parse(shaderSrc.c_str());

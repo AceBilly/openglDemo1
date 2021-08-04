@@ -178,6 +178,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c" />
+    <ClCompile Include="GLWindow_AssisantType.ixx" />
     <ClCompile Include="src\GLWindow.tmp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Modules\Error.ixx" />

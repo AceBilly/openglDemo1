@@ -8,14 +8,14 @@ export module Error;
 import <iostream>;
 import <source_location>;
 
-export namespace Ace {
+namespace Ace {
     std::source_location current(const uint_least32_t _Line_ = __builtin_LINE(),
         const uint_least32_t _Column_ = __builtin_COLUMN(), const char* const _File_ = __builtin_FILE(),
         const char* const _Function_ = __builtin_FUNCTION()) noexcept {
         return std::source_location(_Line_, _Column_, _File_, _Function_);
     }
             // 只处理编译Shader 和 链接程序额错误：暂时
-    void shaderError(unsigned int id, bool flag = true, const std::source_location location = current()) {
+    export void shaderError(unsigned int id, bool flag = true, const std::source_location location = current()) {
             int success;
             char infoLog[512];
             if (flag) {
@@ -38,7 +38,7 @@ export namespace Ace {
                 }
             }
         }
-        void getOpenglError() {
+        export void getOpenglError() {
             auto error_code = glGetError();
             switch (error_code) {
             case GL_NO_ERROR:
