@@ -1,87 +1,92 @@
 
-#include <exception>
 import GLWindow;
-// TODO Âõ†‰∏∫GLFW Â∫ìÁöÑËÆæÁΩÆÂõûË∞ÉÂáΩÊï∞ÁöÑÂáΩÊï∞ÔºåÂØºËá¥Êï¥‰Ωì‰ª£Á†ÅÈùûËâØÊûÑ
-constinit int windowWidth = 800;
-constinit int windowHeight = 800;
+import utility;
 
- constinit float vertices[] = {
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+#include <iostream>
 
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+#include <exception>
 
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
 
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
 
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+constinit float vertices[] = {
+       -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+       0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
+       0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+       0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+       -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+       -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
 
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
+       -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+       0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+       0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+       0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+       -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
+       -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+
+       -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+       -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+       -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+       -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+       -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+       -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+       0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+       0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+       0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+       0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+       0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+       0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+       -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+       0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
+       0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+       0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+       -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+       -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+
+       -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+       0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+       0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+       0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+       -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
+       -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 };
 
-constinit float attributeArray[] = {0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,// Âè≥‰∏ä
-                                    0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,// Âè≥‰∏ã
-                                    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,// Â∑¶‰∏ã
-                                    -0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f// Â∑¶‰∏ä
+constinit float attributeArray[] = { 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,// ”“…œ
+                                    0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,// ”“œ¬
+                                    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,// ◊Ûœ¬
+                                    -0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f// ◊Û…œ
 };
-//constinit float attributeArray[] = {0.0f, 0.0f, 1.0f, 0.0f, 0.0f,// Â∑¶‰∏ã
-//                                    0.5f, 0.5f, 0.0f, 1.0f, 0.0f,// Âè≥‰∏ä
-//                                    0.0f, 0.5f, 0.0f, 0.0f, 1.0f,// Â∑¶‰∏ä
-//                                    0.5f, 0.0f, 1.0f, 1.0f, 1.0f// Âè≥‰∏ã
+//constinit float attributeArray[] = {0.0f, 0.0f, 1.0f, 0.0f, 0.0f,// ◊Ûœ¬
+//                                    0.5f, 0.5f, 0.0f, 1.0f, 0.0f,// ”“…œ
+//                                    0.0f, 0.5f, 0.0f, 0.0f, 1.0f,// ◊Û…œ
+//                                    0.5f, 0.0f, 1.0f, 1.0f, 1.0f// ”“œ¬
 //};
 constinit unsigned int EBOArray[] = {
         0, 1, 3,
         1, 2, 3
 };
 
-import utility;
 
+constinit int windowWidth = 800;
+constinit int windowHeight = 800;
 
-int main2(const int argc, const char *argv[]) {
+int main(const int argc, const char* argv[]) {
     try {
         Ace::GLWindow window(windowWidth, windowHeight, "computer graphics");
-        // TODO VBO EBO VAO Êï¥ÂêàÂà∞‰∏Ä‰∏™RenderContext‰∏≠
+        // TODO VBO EBO VAO ’˚∫œµΩ“ª∏ˆRenderContext÷–
         window.generateVao();
-//        window.generateEBO(EBOArray);
-        window.generateVBO(vertices, {{0, 3},
-                                            {1, 2}});
+        //        window.generateEBO(EBOArray);
+        window.generateVBO(vertices, { {0, 3},
+                                            {1, 2} });
 
         window.loadShader("shader/vertexShader.glsl", "shader/fragmentShader.glsl", "config/variablesLocation.json");
         window.load2DTexture("Images/brick.png", "cusTexture");
         window.load2DTexture("Images/awesomeface.png", "cusTexture1");
         window.setBackgroundColor(0.0f, 1.0f, 1.0f, 0.0f);
         window.render();
-    } catch (std::exception &e) {
+    }
+    catch (std::exception& e) {
         std::cout << "failed : " << e.what() << '\n';
         return 1;
     }

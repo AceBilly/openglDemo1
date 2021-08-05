@@ -108,6 +108,9 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <TranslateIncludes>false</TranslateIncludes>
+      <EnableModules>true</EnableModules>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,6 +130,9 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <TranslateIncludes>false</TranslateIncludes>
+      <EnableModules>true</EnableModules>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +152,9 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <TranslateIncludes>false</TranslateIncludes>
+      <EnableModules>true</EnableModules>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -165,6 +174,9 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <TranslateIncludes>false</TranslateIncludes>
+      <EnableModules>true</EnableModules>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -178,9 +190,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c" />
-    <ClCompile Include="GLWindow_AssisantType.ixx" />
-    <ClCompile Include="src\GLWindow.tmp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Modules\AssisantType.ixx" />
     <ClCompile Include="src\Modules\Error.ixx" />
     <ClCompile Include="src\Modules\GLWindow.ixx" />
     <ClCompile Include="src\Modules\Shader.ixx" />

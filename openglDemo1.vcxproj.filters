@@ -30,12 +30,6 @@
     <ClCompile Include="..\..\glad\src\glad.c">
       <Filter>Source Files\third_party</Filter>
     </ClCompile>
-    <ClCompile Include="src\GLWindow.tmp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Modules\Shader.ixx">
       <Filter>Source Files\Modules</Filter>
     </ClCompile>
@@ -54,8 +48,11 @@
     <ClCompile Include="src\Modules\Texture.ixx">
       <Filter>Source Files\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="GLWindow_AssisantType.ixx">
+    <ClCompile Include="src\Modules\AssisantType.ixx">
       <Filter>Source Files\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

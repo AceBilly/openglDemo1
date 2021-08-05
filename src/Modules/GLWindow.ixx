@@ -13,7 +13,8 @@ module;
 #include "../../inc/glm/glm/gtc/type_ptr.hpp"
 
 export module GLWindow;
-import GLWindow:AssisantType;
+export import :AssisantType;  
+
 
 import Texture;
 import utility.type;
